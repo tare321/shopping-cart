@@ -32,7 +32,8 @@ allTotal += total;
 
 function removeFromCart(element){
   let mainEl = element.closest('.cart-single-item');
-  let price = mainEl.querySelector('p span');
+//  let price = mainEl.querySelector('p span'); -- pri uklanjanju, ne daje broj nego prikazuje NaN
+    let price = mainEl.querySelector('p span').innerText; // basic greska haha, sad vraca brojcanu vrijednost 
   let name = mainEl.querySelector('h3').innerText;
   let vegetables = document.querySelectorAll('.single-item');
   
